@@ -116,13 +116,14 @@ a{
     align-items: center;
 }
 
-#msg-post, #msg-post::placeholder{
-    height: 40vh;
+#msg-post, #msg-post::placeholder, #msg-post:focus{
+    height: 10vh;
     width: 400px;
     text-align: center;
     color: var(--CorTexto1);
     font-weight: bold;
     background-color: var(--CorButton);
+    outline: none;
 }
 
 #dv-central{

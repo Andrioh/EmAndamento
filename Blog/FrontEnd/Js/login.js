@@ -1,5 +1,3 @@
-import { Contas } from "./user.js";
-
 let form = document.getElementById('form');
 let mslogin = document.getElementById('ms-login');
 
