@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../Css/index.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Blog</h1>
+    </header>
+
+    <main>
+
+        <form id="form">
+
+            <h2>Login</h2>
+            <p id="ms-login"></p>
+            
+            <label for="Nome">Nome</label>
+            <input type="text" name="Nome" id="nm-user" autocomplete="name" required minlength="4" placeholder="Ex: Andrioh" value="">
+            
+            <label for="Senha">Senha</label>
+            <input type="password" name="Senha" id="sn-user" autocomplete="new-password" required minlength="8" placeholder="Ex: 12345678" value="">
+            
+            <input type="submit" value="Continuar" id="btn-submit-Login" class="btn-submit">
+            
+            <p>Ainda não tem uma conta? <a href="Registro.html">Registre-se!</a></p>
+
+        </form>
+
+    </main>
+
+    <script type="module" src="../Js/login.js"></script>
+</body>
+</html>
