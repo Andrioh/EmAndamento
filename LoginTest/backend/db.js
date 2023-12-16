@@ -11,7 +11,7 @@ connection.connect((error)=>{
     if (error){
         throw error;
     }else{
-        console.log(`Conectado ao banco de dados: ${DB_NAME}`)
+        console.log(`Conectado ao banco de dados: ${process.env.DB_NAME}`)
     }
 });
 

@@ -3,7 +3,7 @@ const db = require("../../db")
 module.exports = {
     BuscarUsers: ()=>{
         return new Promise((success, reject) =>{
-            db.query("", (error, results) => {
+            db.query("SELECT * FROM DadosUsers", (error, results) => {
                 if (error){
                     throw error;
                     reject(error);
