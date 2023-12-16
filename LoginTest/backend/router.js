@@ -1,5 +1,9 @@
 const express = require("express");
-const Routers = express.Router();
+const routers = express.Router();
 
+const dadosconstroller = require("./src/Controller/dadoscontroller")
 
-module.exports = Routers;
+routers.get("/users", dadosconstroller.BuscarUsers);
+// routers.post("/user/:email/:senha", dadosconstroller.AddUser); 
+
+module.exports = routers;
