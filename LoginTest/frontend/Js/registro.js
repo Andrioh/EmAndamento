@@ -13,8 +13,6 @@ let formRG = document.getElementById("rg-form");
 /* Funções */
 formRG.addEventListener("submit", function(event){
     event.preventDefault();
-    console.log("Submit registro ativado")
-
     const url = 'http://localhost:3000/api/user/';
     const formData = new FormData(this);
 
@@ -24,5 +22,4 @@ formRG.addEventListener("submit", function(event){
         .then(response => response.json())
         .then(data => console.log('Resposta do servidor:', data))
         .catch(error => console.error('Erro na requisição:', error));
-
 });

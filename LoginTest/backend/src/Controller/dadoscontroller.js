@@ -19,5 +19,15 @@ module.exports ={
         }catch(error){
             console.log(`[Error]: ${error.message}`)
         }
+    },
+
+    UserSearch: async (req, res) =>{
+        try{
+            const {Email, Password} = req.params;
+            const User = await dadosservice.UserSearch(Email, Password);
+            res.json({error: null, result: User || {}})
+        }catch(error){
+            console.log(`[Erro]: ${error.message}`)
+        }
     }
 };

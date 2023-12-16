@@ -27,5 +27,20 @@ module.exports = {
                 }
             });
         });
+    },
+
+    UserSearch: (Email, Password) =>{
+        return new Promise((resolve, reject) =>{
+            
+            db.query("SELECT * FROM DadosUsers WHERE Email = LOWER(?) AND Password = ?", [Email,Password],(error, results) => {
+                if (error){
+                console.log(`Erro ao buscar conta: ${error.message}`)
+                reject(error)
+                }else{
+                    console.log(`Resultados da busca: ${JSON.stringify(results)}`);
+                    resolve(results)
+                }
+            });
+        });
     }
 };
