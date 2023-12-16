@@ -11,7 +11,7 @@ let senhaRG = document.getElementById("rg-password");
 let formRG = document.getElementById("rg-form");
 
 /* Funções */
-formRG.addEventListener("submit", function(event){
+formRG.addEventListener("submit", function (event) {
     event.preventDefault();
     const url = 'http://localhost:3000/api/user/';
     const formData = new FormData(this);
@@ -22,4 +22,12 @@ formRG.addEventListener("submit", function(event){
         .then(response => response.json())
         .then(data => console.log('Resposta do servidor:', data))
         .catch(error => console.error('Erro na requisição:', error));
+
+    if (error) {
+    } else {
+        pLG.innerHTML = "Conta criada com sucesso!"
+        pLG.style.display = "Flex"
+        pLG.style.color = "green"
+        setTimeout(function(){pLG.style.display = "none"},4000)
+    }
 });
