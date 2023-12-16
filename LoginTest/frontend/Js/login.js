@@ -28,7 +28,6 @@ formLG.addEventListener("submit", function (event) {
                 pLG.style.display = "Flex"
                 pLG.style.color = "green"
                 setTimeout(function(){pLG.style.display = "none"},4000)
-                window.location.href = "../Html/index.html";
             } else {
                 pLG.innerHTML = "Conta não encontrada!" 
                 pLG.style.display = "Flex"
